@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to my personal DevOps glossary.</p>
+    <table>
+      <thead>
+      <tr><th>ID#</th><th>Terms</th><th>Description</th><th>References</th></tr>
+    </thead>
+      <% terms.forEach((item) => { %>
+        <tr><td><%= item.id %></td><td><%= item.term %></td><td><%= item.description %></td><td><%= item.references %></td></tr>
+      <% }); %>
+    </table>
+  </body>
+</html>
